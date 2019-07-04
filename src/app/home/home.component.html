@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-light bg-light justify-content-center align-items-center">
+        <div class="row ">
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-outline-primary" *ngIf="!homePage" (click)="backClicked()">back</button>
+            </div>
+            <div class="col-lg-10 ">
+                <a class="navbar-brand" href="#">{{pageName}}</a>
+            </div>
+        </div>
+    </nav>
+    <div class="mt-2" *ngIf="homePage">
+        <button routerLink="/displayNotFound" type="button" class="btn btn-outline-primary">Display Not Found</button>
+        <button  routerLink="/employeeList" type="button" class="btn btn-outline-secondary ml-2" (click)="showEmployee()">Show Employee List</button>
+    </div>
+</div>
