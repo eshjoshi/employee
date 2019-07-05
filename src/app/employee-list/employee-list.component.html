@@ -1,5 +1,6 @@
 <div class="container mt-2">
-    <div class="list-group" *ngFor="let employee of employees">
-        <a href="#" class="list-group-item list-group-item-action">{{employee.name}}</a>
-    </div>
+    <ul class="list-group"  *ngFor="let employee of employees" >
+        <li class="list-group-item" (click)="onSelect(employee)">
+            <span class="badge">{{employee.id}}</span>{{employee.name}}</li>
+    </ul>
 </div>

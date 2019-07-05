@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { DisplayNotFoundComponent } from './display-not-found/display-not-found.component';
 import { AppComponent } from './app.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 const routes: Routes = [
   // {path:'', redirectTo:'/displayNotFound',pathMatch:'full'},
  // {path:'',component:AppComponent},
   {path:'displayNotFound',component:DisplayNotFoundComponent},
   {path:'employeeList',component:EmployeeListComponent},
-  // {path:"**", component:DisplayNotFoundComponent }
+  {path:'employeeDetails', component:EmployeeDetailsComponent},
+  {path:"**", component:DisplayNotFoundComponent }
 ];
 
 @NgModule({
@@ -17,4 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DisplayNotFoundComponent,EmployeeListComponent]
+export const routingComponents = [DisplayNotFoundComponent,EmployeeListComponent, EmployeeDetailsComponent]
